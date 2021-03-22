@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestAll">
+    <test name="testrun">
+        <classes>
+            <class name="com.qa.tests.HomePageTest" />
+            <class name="com.qa.tests.WidgetsPageTest" />
+        </classes>
+    </test>
+</suite>
