@@ -18,7 +18,6 @@ public class BasePage {
     public void initWebDriver() {
         ChromeDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.get("https://demoqa.com/");
     }
 
     public void quitWebDriver() {
@@ -26,6 +25,14 @@ public class BasePage {
             driver.close();
             driver.quit();
         }
+    }
+
+    public void openPage(String Url) {
+        driver.get(Url);
+    }
+
+    public void maximizeWindow() {
+        driver.manage().window().maximize();
     }
 
     public boolean clickElement(By locator) {
@@ -93,5 +100,10 @@ public class BasePage {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+    }
+
+    public void scrollToElement(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
 }

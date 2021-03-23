@@ -8,6 +8,10 @@ public class HomePage extends BasePage {
     private static final By HOME_PAGE_LOCATOR = By.xpath("//h5[text()='Widgets']");
 
     //methods
+    public void clickWidget() {
+        clickElement(HOME_PAGE_LOCATOR);
+    }
+
     public boolean isWidgetClicked() {
         return clickElement(HOME_PAGE_LOCATOR);
     }

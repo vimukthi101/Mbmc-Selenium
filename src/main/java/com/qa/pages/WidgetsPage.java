@@ -6,16 +6,18 @@ import org.openqa.selenium.WebElement;
 
 public class WidgetsPage extends BasePage {
     //locators
+    private static final By PAGE_HEADER_LOCATOR = By.className("main-header");
     private static final By FORM_DIV_LOCATOR = By.xpath("//div[text()='Forms']");
     private static final By PRACTICE_FORM_LOCATOR = By.xpath("//span[text()='Practice Form']");
     private static final By STUDENT_REGISTRATION_FORM_LOCATOR = By.xpath("//h5[text()='Student Registration Form']");
     private static final By FIRST_NAME_LOCATOR = By.id("firstName");
+//    private static final By FIRST_NAME_LOCATOR = By.id("firstName1");
     private static final By LAST_NAME_LOCATOR = By.id("lastName");
     private static final By EMAIL_LOCATOR = By.id("userEmail");
     private static final By GENDER_LOCATOR = By.xpath("//div[@class='col-md-9 col-sm-12']//div");
     private static final By MOBILE_NUMBER_LOCATOR = By.id("userNumber");
     private static final By BIRTH_DAY_LOCATOR = By.id("dateOfBirthInput");
-    private static final By SPORTS_LOCATOR = By.xpath("//div[contains(@class,'custom-control custom-checkbox')][1]");
+    private static final By SPORTS_LOCATOR = By.id("hobbies-checkbox-1");
     private static final By PROFILE_IMAGE_UPLOADER_LOCATOR = By.id("uploadPicture");
     private static final By FRMHEADR_LOCATOR = By.id("example-modal-sizes-title-lg");
     private static final By CLOSE_BUTTON_LOCATOR = By.id("closeLargeModal");
@@ -31,6 +33,10 @@ public class WidgetsPage extends BasePage {
     private static final String PROFILE_PIC_PATH = "/Users/vsaranga/Downloads/DSC_0847.jpg";
 
     //methods
+    public boolean isPageLoaded() {
+        return isVisible(PAGE_HEADER_LOCATOR);
+    }
+
     public boolean isFormClicked() {
         return clickElement(FORM_DIV_LOCATOR);
     }
@@ -72,6 +78,7 @@ public class WidgetsPage extends BasePage {
     public boolean addImage() {
         try {
             WebElement el = getElement(PROFILE_IMAGE_UPLOADER_LOCATOR);
+            el.click();
             el.sendKeys(PROFILE_PIC_PATH);
             return true;
         } catch (Exception ex) {
@@ -80,8 +87,7 @@ public class WidgetsPage extends BasePage {
         }
     }
 
-    public boolean isFormSubmitted() {
-        scrollDown();
+    public boolean submitForm() {
         return clickElement(SUBMIT_BUTTON_LOCATOR);
     }
 
