@@ -16,7 +16,8 @@ public class WidgetsPageTest extends BaseTest {
         Assert.assertEquals(widgetsPage.isStudentFormLoaded(), true);
     }
 
-    @Test (priority = 2, description = "Form Fill")
+    //@Test (priority = 2, description = "Form Fill")
+    @Test (dependsOnMethods = "studentOnForm", description = "Form Fill")
     public void formFill(){
         Assert.assertTrue(widgetsPage.addNames(), "Names");
         Assert.assertTrue(widgetsPage.addEmail(), "Email");
