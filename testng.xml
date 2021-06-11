@@ -3,8 +3,7 @@
 <suite name="TestAll">
     <test name="testrun">
         <classes>
-            <class name="com.qa.tests.HomePageTest" />
-            <class name="com.qa.tests.WidgetsPageTest" />
+            <class name="com.qa.tests.pwdForm.SuccessFlow" />
         </classes>
     </test>
 </suite>
