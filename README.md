@@ -1,2 +1,3 @@
-# SeleniumSampleProject
-Selenium sample project with Page object model for the J'pura uni session
+# Selenium Project for MBMC Automation
+
+This is the selenium automation project for the MBMC site
