@@ -58,8 +58,8 @@ public class SuccessFlow extends BaseTest {
         pdwPage.enterEndPoint("end");
         pdwPage.enterTotalLength("123");
         pdwPage.selectPermissionType("New Connection");
-        pdwPage.uploadRequestLetter("C:/Users/vsaranga/Downloads/Profile.pdf");
-        pdwPage.uploadGeoLocationMap("C:/Users/vsaranga/Downloads/Profile.pdf");
+        pdwPage.uploadRequestLetter(System.getProperty("user.dir") + "\\target\\resources\\pdffile.pdf");
+        pdwPage.uploadGeoLocationMap(System.getProperty("user.dir") + "\\target\\resources\\pdffile.pdf");
         pdwPage.clickSubmitButton();
         waitSomeSeconds(10);
         pdwPage.clickConfirmButton();

@@ -58,8 +58,8 @@ public class WrongFileFormat extends BaseTest {
         pdwPage.enterEndPoint("end");
         pdwPage.enterTotalLength("123");
         pdwPage.selectPermissionType("New Connection");
-        pdwPage.uploadRequestLetter("C:/Area51/GIT/SeleniumSampleProject/target/resources/worddoc.docx");
-        pdwPage.uploadGeoLocationMap("C:/Area51/GIT/SeleniumSampleProject/target/resources/worddoc.docx");
+        pdwPage.uploadRequestLetter(System.getProperty("user.dir") + "\\target\\resources\\worddoc.docx");
+        pdwPage.uploadGeoLocationMap(System.getProperty("user.dir") + "\\target\\resources\\worddoc.docx");
         pdwPage.clickSubmitButton();
         waitSomeSeconds(10);
         pdwPage.clickConfirmButton();
