@@ -9,22 +9,27 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class BasePage {
     private static WebDriver driver;
     private int timeOut = 10;
-    String Url = "http://mbmc.aaravsoftware.in/login";
 
     public void initWebDriver() {
         ChromeDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.setExperimentalOption("useAutomationExtension", false);
+        options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+        driver = new ChromeDriver(options);
     }
 
     public void quitWebDriver() {
@@ -34,7 +39,7 @@ public class BasePage {
         }
     }
 
-    public void openPage() {
+    public void openPage(String Url) {
         driver.get(Url);
     }
 
@@ -114,6 +119,15 @@ public class BasePage {
             return driver.findElement(locator).getAttribute("value");
         } catch (Exception ex) {
             return null;
+        }
+    }
+
+    public int getElementCount(By locator) {
+        try {
+            int myListToCheck;
+            return myListToCheck = driver.findElements(locator).size();
+        } catch (Exception ex) {
+            return 0;
         }
     }
 

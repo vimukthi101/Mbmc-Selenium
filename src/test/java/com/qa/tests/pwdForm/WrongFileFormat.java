@@ -12,13 +12,14 @@ public class WrongFileFormat extends BaseTest {
     LoginPage loginPage = new LoginPage();
     HomePage homePage = new HomePage();
     PdwPage pdwPage = new PdwPage();
+    String Url = "http://mbmc.aaravsoftware.in/login";
     String email = "smn101296@gmail.com";
     String password = "1234";
     String appNo;
 
     @Test
     public void login() throws InterruptedException {
-        openPage();
+        openPage(Url);
         maximizeWindow();
         loginPage.loginAsUser(email, password);
         waitSomeSeconds(10);
