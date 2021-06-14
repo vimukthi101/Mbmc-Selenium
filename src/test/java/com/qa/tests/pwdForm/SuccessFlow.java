@@ -7,8 +7,6 @@ import com.qa.pages.PdwPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.rmi.server.UID;
-
 public class SuccessFlow extends BaseTest {
 
     LoginPage loginPage = new LoginPage();

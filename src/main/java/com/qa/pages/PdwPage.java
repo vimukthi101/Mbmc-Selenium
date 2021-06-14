@@ -28,9 +28,9 @@ public class PdwPage extends BasePage {
     private static final By ROAD_LOCATOR = By.id("road_name");
     private static final By LANDMARK_LOCATOR = By.id("landmark");
     private static final By WORK_START_DAY_LOCATOR = By.xpath("//input[@id='work_start_date']");
-    private static final By DATE_FOR_WORK_START_DAY_LOCATOR = By.xpath("//*[@id=\"ui-datepicker-div\"]/table/tbody/tr[2]/td[6]/a");
+    private static final By DATE_FOR_WORK_START_DAY_LOCATOR = By.xpath("//*[@id=\"ui-datepicker-div\"]//table//tbody//tr[5]//td[3]/a");
     private static final By WORK_END_DAY_LOCATOR = By.id("work_end_date");
-    private static final By DATE_FOR_WORK_END_DAY_LOCATOR = By.xpath("//*[@id=\"ui-datepicker-div\"]/table/tbody/tr[4]/td[6]/a");
+    private static final By DATE_FOR_WORK_END_DAY_LOCATOR = By.xpath("//*[@id=\"ui-datepicker-div\"]//table//tbody//tr[5]//td[4]/a");
     private static final By ROAD_TYPE_LOCATOR = By.name("road_type[]");
     private static final By START_POINT_LOCATOR = By.name("start_point[]");
     private static final By END_POINT_LOCATOR = By.name("end_point[]");
@@ -274,12 +274,12 @@ public class PdwPage extends BasePage {
     }
 
     public void selectDateForWorkStartDate(){
-        typeText(WORK_START_DAY_LOCATOR, "2021-06-11");
+        typeText(WORK_START_DAY_LOCATOR, "2022-06-11");
         clickUsingJavaScript(DATE_FOR_WORK_START_DAY_LOCATOR);
     }
 
     public void selectDateForWorkEndDate(){
-        typeText(WORK_END_DAY_LOCATOR, "2021-06-24");
+        typeText(WORK_END_DAY_LOCATOR, "2022-06-24");
         clickUsingJavaScript(DATE_FOR_WORK_END_DAY_LOCATOR);
     }
 
