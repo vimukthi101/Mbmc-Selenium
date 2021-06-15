@@ -1,9 +1,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="TestAll">
-    <test name="testrun">
-        <classes>
-            <class name="com.qa.tests.pwdForm.SuccessFlow" />
-        </classes>
+<suite name="SeleniumTests">
+    <test name="insuranceFormTests">
+        <packages>
+            <package name="com.qa.tests.insuranceForm"></package>
+        </packages>
+    </test>
+    <test name="pwdFormTests">
+        <packages>
+            <package name="com.qa.tests.pwdForm"></package>
+        </packages>
     </test>
 </suite>
