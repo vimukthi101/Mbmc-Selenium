@@ -1,14 +1,59 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="SeleniumTests">
-    <test name="insuranceFormTests">
-        <packages>
-            <package name="com.qa.tests.insuranceForm"></package>
-        </packages>
+    <test name="InsuranceForm-InvalidInputs_DateOfCommencement">
+        <classes>
+            <class name="com.qa.tests.insuranceForm.InvalidInputs_DateOfCommencement"></class>
+        </classes>
     </test>
-    <test name="pwdFormTests">
-        <packages>
-            <package name="com.qa.tests.pwdForm"></package>
-        </packages>
+    <test name="InsuranceForm-InvalidInputs_GreaterThanMaxmiumValues">
+        <classes>
+            <class name="com.qa.tests.insuranceForm.InvalidInputs_GreaterThanMaxmiumValues"></class>
+        </classes>
+    </test>
+    <test name="InsuranceForm-InvalidInputs_LessThanMinimalValues">
+        <classes>
+            <class name="com.qa.tests.insuranceForm.InvalidInputs_LessThanMinimalValues"></class>
+        </classes>
+    </test>
+    <test name="InsuranceForm-WithoutMandatoryParamsFlow">
+        <classes>
+            <class name="com.qa.tests.insuranceForm.WithoutMandatoryParamsFlow"></class>
+        </classes>
+    </test>
+    <test name="InsuranceForm-WithoutOptionalParamsFlow">
+        <classes>
+            <class name="com.qa.tests.insuranceForm.WithoutOptionalParamsFlow"></class>
+        </classes>
+    </test>
+    <test name="InsuranceForm-SuccessFlow">
+        <classes>
+            <class name="com.qa.tests.insuranceForm.SuccessFlow"></class>
+        </classes>
+    </test>
+    <test name="PwdForm-InvalidInputs">
+        <classes>
+            <class name="com.qa.tests.pwdForm.InvalidInputs"></class>
+        </classes>
+    </test>
+    <test name="PwdForm-WithoutMandatoryParamsFlow">
+        <classes>
+            <class name="com.qa.tests.pwdForm.WithoutMandatoryParamsFlow"></class>
+        </classes>
+    </test>
+    <test name="PwdForm-WrongFileFormat">
+        <classes>
+            <class name="com.qa.tests.pwdForm.WrongFileFormat"></class>
+        </classes>
+    </test>
+    <test name="PwdForm-WithoutOptionalParamsFlow">
+        <classes>
+            <class name="com.qa.tests.pwdForm.WithoutOptionalParamsFlow"></class>
+        </classes>
+    </test>
+    <test name="PwdForm-SuccessFlow">
+        <classes>
+            <class name="com.qa.tests.pwdForm.SuccessFlow"></class>
+        </classes>
     </test>
 </suite>

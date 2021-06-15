@@ -1,15 +1,15 @@
 package com.qa.base;
 
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
 public class BaseTest extends BasePage {
-    @BeforeSuite
+    @BeforeTest
     public void beforeSuite() {
         initWebDriver();
     }
 
-    @AfterSuite
+    @AfterTest
     public void afterSuite() {
         quitWebDriver();
     }
